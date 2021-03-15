@@ -10,7 +10,18 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="body">
+    <header class="header">
+      <h1 class="header__title">Ruby on Rails スケジュール管理アプリ</h1>
+    </header>
+    <main class="main">
+      <%= yield %>
+    </main>
+    <footer class="footer">
+      <p class="footer__date"><%= @current_date_for_footer %></p>
+      <% if @display_schedule_counter %>
+        <p class="footer__total-num-of-schedule"><%= @total_num_of_schedule_for_footer %></p>
+      <% end %>
+    </footer>
   </body>
 </html>

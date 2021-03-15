@@ -1,0 +1,37 @@
+<div class="show">
+  <h2 class="show__title">スケジュール詳細</h2>
+
+  <div class="show__form">
+    <table class="show__table">
+      <tr>
+        <th>タイトル</th>
+        <td><%= @schedule.title %></td>
+      </tr>
+      <tr>
+        <th>開始日</th>
+        <td><%= @schedule.start_date.strftime('%Y年%m月%d日') %></td>
+      </tr>
+      <tr>
+        <th>終了日</th>
+        <td><%= @schedule.end_date.strftime('%Y年%m月%d日') %></td>
+      </tr>
+      <tr>
+        <th>投稿日時</th>
+        <td><%= @schedule.created_at.to_s(:datetime_jp) %></td>
+      </tr>
+      <tr>
+        <th>終日</th>
+        <td><% if @schedule.is_all_day %><%= '○' %><% end %></td>
+      </tr>
+      <tr>
+        <th>スケジュールメモ</th>
+        <td><%= @schedule.memo %></td>
+      </tr>
+    </table>
+    <ul class="show__link-list">
+      <li class="show__link"><%= link_to("スケジュール一覧に戻る","/") %></li>
+      <li class="show__link"><%= link_to("スケジュールを編集する", edit_schedule_path(@schedule.id)) %></li>
+      <li class="show__link"><%= link_to("スケジュールを削除",schedule_path(@schedule.id), method: :delete, data: {confirm: '本当に削除しますか？'}) %></li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,152 @@
+/* ************************* */
+// 外部ファイルのインポート
+@import "variables";
+
+// Place all the styles related to the schedules controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+/* ************************* */
+// 新規登録画面
+.new {
+  @include main-format;
+}
+
+.new__title {
+  @include main-title;
+}
+
+.new__table {
+  margin-top: 20px;
+
+  th {
+    @include main-table-head;
+  }
+
+  td {
+    @include main-table-data;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    height: 28px;
+  }
+
+  input[type="date"] {
+    width: 100%;
+    height: 28px;
+  }
+
+  .new__text--memo {
+    width: 100%;
+    height: 200px;
+  }
+
+  .new__checkbox,
+  .new__checkbox--caution {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.new__btn {
+  margin-top: 15px;
+}
+
+.new__link--index {
+  display: block;
+  margin-top: 15px;
+}
+
+.error {
+  &__title {
+    margin-top: 16px;
+    background-color: #ec98ac8f;
+    border: 2px solid #ec7592;
+    padding: 15px;
+    width: 400px;
+    text-align: center;
+  }
+
+  &__messages {
+    padding-left: 40px;
+    margin-top: 12px;
+  }
+}
+
+/* ************************* */
+// 一覧画面
+.index {
+  @include main-format;
+
+  &__title {
+    @include main-title;
+  }
+
+  &__table {
+    margin-top: 20px;
+
+    th {
+      @include index-table-head;
+    }
+
+    td {
+      @include index-table-data;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+  }
+
+  &__link--new {
+    display: block;
+    margin-top: 20px;
+    text-decoration: none;
+  }
+}
+
+.flash {
+  background-color: #98ecaa7a;
+  border: 2px solid #5cd075;
+  padding: 15px;
+  width: 400px;
+  text-align: center;
+  margin-top: 16px;
+}
+
+/* ************************* */
+// 詳細画面
+.show {
+  @include main-format;
+
+  &__title {
+    @include main-title;
+  }
+
+  &__table {
+    margin-top: 20px;
+
+    th {
+      @include show-table-head;
+    }
+
+    td {
+      @include show-table-data;
+    }
+  }
+
+  &__link-list {
+    list-style: none;
+    margin-top: 16px;
+  }
+
+  &__link {
+    margin-top: 8px;
+
+    :link {
+      text-decoration: none;
+    }
+  }
+}
