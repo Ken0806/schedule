@@ -1,0 +1,12 @@
+<% if schedule.errors.full_messages != [] %>
+  <div class="error">
+    <div class="error__title">
+      <p>スケジュールを登録できませんでした</p>
+    </div>
+    <% schedule.errors.full_messages.each do |message|%>
+      <div class="error__messages">
+        <p><%= message %></p>
+      </div>
+    <% end %>
+  </div>
+<% end %>

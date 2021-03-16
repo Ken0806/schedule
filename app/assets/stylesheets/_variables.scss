@@ -1,0 +1,82 @@
+/* ************************* */
+// application用
+@mixin style-for-header-and-footer {
+  background-color: #c52f24;
+  color: #fff;
+  font-size: 32px;
+  padding: $common-padding;
+  width: 100%;
+  height: auto;
+}
+
+$mergin-for-header-and-footer: 20px 0;
+
+/* ************************* */
+// schedules/new用
+@mixin main-format {
+  padding: $common-padding;
+  margin: 40px 0 40px;
+}
+
+@mixin main-title {
+  font-size: 1.5em;
+}
+
+@mixin main-table-head {
+  background-color: #ffdfdf;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: solid 1px black;
+  text-align: center;
+  vertical-align: middle;
+}
+
+@mixin main-table-data {
+  padding: 10px 20px;
+  background-color: #f1c8c861;
+  width: 350px;
+  border: solid 1px black;
+  text-align: center;
+}
+
+/* ************************* */
+// /用
+@mixin index-table-head {
+  background-color: #ffdfdf;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: solid 1px black;
+  text-align: center;
+  vertical-align: middle;
+}
+
+@mixin index-table-data {
+  padding: 10px 20px;
+  background-color: #f1c8c861;
+  border: solid 1px black;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* ************************* */
+// 詳細画面用
+@mixin show-table-head {
+  background-color: #ffdfdf;
+  font-weight: bold;
+  padding: 15px 20px;
+  border: solid 1px black;
+  text-align: center;
+  vertical-align: middle;
+}
+
+@mixin show-table-data {
+  padding: 15px 20px;
+  background-color: #f1c8c861;
+  border: solid 1px black;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* ************************* */
+// 共用
+$common-padding: 10px 10px;
